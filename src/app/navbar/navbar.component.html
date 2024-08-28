@@ -1,0 +1,16 @@
+<section>
+    <div class="header">
+        <div class="logoImg">
+            <img src="\assets\WhatsApp Image 2024-08-21 at 17.33.00_ab4804ab.jpg" alt="Logo" class="logo">
+        </div>
+        <div>
+            <button (click)="toggleSidebar()" class="toggle-button"><i class="fas fa-bars"></i></button>
+            <div [ngClass]="{'sidebar-open': isSidebarOpen, 'sidebar-closed': !isSidebarOpen}" class="sidebar">
+                <button (click)="toggleSidebar()" class="close-button"><i class="fas fa-times"></i></button>
+                <p>Page 1</p>
+                <p>About us</p>
+                <p>Gallery</p>
+            </div>
+        </div>
+    </div>
+</section>

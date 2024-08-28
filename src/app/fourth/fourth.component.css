@@ -1,0 +1,166 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-right: 20px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.wedding-image {
+    max-width: 70%;
+    height: auto;
+}
+
+.text-section {
+    margin-top: 20px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif; 
+    font-size: 50px;
+    width: 70%;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555; 
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.credit {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.credit a {
+    color: #777;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+
+.learn-more-btn {
+    background-color: #dcb5b5; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background-color: #e6c6c6;
+}
+
+.right-section {
+    position: relative;
+    max-width: 450px;
+    margin-top: 10px;
+    z-index: 2; 
+}
+
+.side-description {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: -650px;
+    line-height: 2;
+    color: #555;
+    z-index: 2; 
+    position: relative;
+    animation: slideInTop 1s ease-out;
+}   
+.bouquet-image {
+    width: 80%;
+    height: auto;
+    z-index: 2; 
+    position: relative;
+    animation: slideInRight 1s ease-out;
+}
+
+.decorative-svg {
+    position: absolute;
+    top: -25px; 
+    right: -0px; 
+    width: 150px;
+    height: 150px;
+    opacity: 0.1;
+    z-index: 1; 
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .right-section {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .side-description {
+        margin-bottom: 20px;
+    }
+
+    .decorative-svg {
+        position: static;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+

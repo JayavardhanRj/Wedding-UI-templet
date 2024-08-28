@@ -1,0 +1,178 @@
+.wedding-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f4f1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .wedding-image {
+    position: relative;
+  }
+  
+  .wedding-image img {
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    animation: slideUp 1s ease-out forwards;
+  }
+  
+  .wedding-image svg {
+    position: absolute;
+    top: 0;
+    left: -80px;
+    margin-top: 70px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  
+  .wedding-text {
+    max-width: 400px;
+    padding-left: 100px;
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+  
+  .wedding-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 10%;
+  }
+  
+  .wedding-text p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    width: 100%;
+    font-family: 'Open Sans',sans-serif;
+    color: #000;
+  }
+  
+  .wedding-text .credit {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .wedding-text .credit a {
+    text-decoration: none;
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .read-more-btn {
+    background-color: #e7c1c1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid rgb(218,192,199);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #d19898;
+    border: 2px solid black;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @media (max-width: 1024px) {
+    .wedding-text {
+      padding-left: 1rem; 
+    }
+  
+    .wedding-image svg {
+      left: -5%; 
+    }
+  
+    .wedding-text h1 {
+      font-size: 2rem; 
+    }
+  
+    .wedding-text p {
+      font-size: 0.875rem; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .wedding-container {
+      flex-direction: column; 
+    }
+    .wedding-image img{
+        max-width: 600px;
+    }
+  
+    .wedding-text {
+      padding-left: 0; 
+      text-align: center; 
+    }
+  
+    .wedding-image {
+      max-width: 100%; 
+    }
+  
+    .wedding-text h1 {
+      font-size: 1.75rem; 
+    }
+  
+    .wedding-text p {
+      font-size: 0.75rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .wedding-text h1 {
+      font-size: 1.5rem;
+    }
+    .wedding-image img{
+        max-width: 250px;
+    }
+    .wedding-image svg {
+        display: none;
+    }
+    .wedding-text p {
+      font-size: 0.65rem; 
+    }
+  
+    .read-more-btn {
+      padding: 0.5rem 1rem; 
+      font-size: 0.875rem; 
+    }
+  }
+  
