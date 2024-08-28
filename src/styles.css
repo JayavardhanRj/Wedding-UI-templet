@@ -45,7 +45,7 @@ section {
     text-align: center;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-    z-index: 1000; /* Ensure sidebar is above all other elements */
+    z-index: 1000; 
   }
   
   .sidebar-open {
